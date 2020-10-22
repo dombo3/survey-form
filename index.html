@@ -9,104 +9,112 @@
 
 <body>
   <div>
-    <h1>freeCodeCamp Survey Form</h1>
-    <p>Thank you for taking the time to help us improve the platform</p>
-      <form action="www.google.com" method="POST">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
-        </div>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form" action="http://www.example.com" method="POST">
+      <div>
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email">
-        </div>
+      <div>
+        <label id="email-label" for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+      </div>
 
-        <div>
-          <label for="age">Age (optional)</label>
-          <input type="text" id="age" name="age">
-        </div>
+      <div>
+        <label id="number-label" for="number">Age (optional)</label>
+        <input type="number" id="number" name="age" placeholder="Age" min="10" max="99">
+      </div>
 
-        <div>
-          <label for="role">Which option best describes your current role?</label>
-          <select id="role" name="role">
-            <option value="" disabled selected>Select current role</option>
-            <option>Student</option>
-            <option>Full Time Job</option>
-            <option>Full Time Learner</option>
-            <option>Prefer not to say</option>
-            <option>Other</option>
-          </select>
-        </div>
+      <div>
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select id="dropdown" name="role" required>
+          <option value="" disabled selected>Select current role</option>
+          <option>Student</option>
+          <option>Full Time Job</option>
+          <option>Full Time Learner</option>
+          <option>Prefer not to say</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-        <div>
-          <p>Would you recommend freeCodeCamp to a friend?</p>
-            <input type="radio" id="definitely" name="recommendation" value="definitely">
+      <div>
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <ul>
+          <li>
+            <input type="radio" id="definitely" name="recommendation" value="definitely" checked>
             <label for="definitely">Definitely</label>
-
+          </li>
+          <li>
             <input type="radio" id="maybe" name="recommendation" value="maybe">
             <label for="maybe">Maybe</label>
-
+          </li>
+          <li>
             <input type="radio" id="not_sure" name="recommendation" value="not_sure">
             <label for="not_sure">Not sure</label>
-        </div>
+          </li>
+        </ul>
+      </div>
 
-        <div>
-          <label for="favourite_feature">What is your favorite feature of freeCodeCamp?</label>
-          <select id="favourite_feature" name="favourite_feature">
-            <option value="" disabled selected>Select an option</option>
-            <option>Challanges</option>
-            <option>Projects</option>
-            <option>Community</option>
-            <option>Open Source</option>
-          </select>
-        </div>
+      <div>
+        <label for="favourite_feature">What is your favorite feature of freeCodeCamp?</label>
+        <select id="favourite_feature" name="favourite_feature" required>
+          <option value="" disabled selected>Select an option</option>
+          <option>Challanges</option>
+          <option>Projects</option>
+          <option>Community</option>
+          <option>Open Source</option>
+        </select>
+      </div>
 
-        <div>
-          <p>What would you like to see improved? (Check all that apply)</p>
+      <div>
+        <p>What would you like to see improved? (Check all that apply)</p>
 
-            <input type="checkbox" id="front-end" name="like">
-            <label for="front-end">Front-end Projects</label>
+        <input type="checkbox" id="front-end" name="like" value="frontend-projects">
+        <label for="front-end">Front-end Projects</label>
 
-            <input type="checkbox" id="back-end" name="like">
-            <label for="back-end">Back-end Projects</label>
+        <input type="checkbox" id="back-end" name="like" value="backend-projects">
+        <label for="back-end">Back-end Projects</label>
 
-            <input type="checkbox" id="data-visualisation" name="like">
-            <label for="data-visualisation">Data Visualization</label>
+        <input type="checkbox" id="data-visualisation" name="like" value="data-visualisation">
+        <label for="data-visualisation">Data Visualization</label>
 
-            <input type="checkbox" id="challanges" name="like">
-            <label for="challanges">Challenges</label>
+        <input type="checkbox" id="challenges" name="like" value="challenges">
+        <label for="challenges">Challenges</label>
 
-            <input type="checkbox" id="open-source-community" name="like">
-            <label for="open-source-community">Open Source Community</label>
+        <input type="checkbox" id="open-source-community" name="like" value="open-source-community">
+        <label for="open-source-community">Open Source Community</label>
 
-            <input type="checkbox" id="gitter-help" name="like">
-            <label for="gitter-help">Gitter help rooms</label>
+        <input type="checkbox" id="gitter-help" name="like" value="gitter-help">
+        <label for="gitter-help">Gitter help rooms</label>
 
-            <input type="checkbox" id="videos" name="like">
-            <label for="videos">Videos</label>
+        <input type="checkbox" id="videos" name="like" value="videos">
+        <label for="videos">Videos</label>
 
-            <input type="checkbox" id="meetups" name="like">
-            <label for="meetups">City Meetups</label>
+        <input type="checkbox" id="meetups" name="like" value="meetups">
+        <label for="meetups">City Meetups</label>
 
-            <input type="checkbox" id="wiki" name="like">
-            <label for="wiki">Wiki</label>
+        <input type="checkbox" id="wiki" name="like" value="wiki">
+        <label for="wiki">Wiki</label>
 
-            <input type="checkbox" id="forum" name="like">
-            <label for="forum">Forum</label>
+        <input type="checkbox" id="forum" name="like" value="forum">
+        <label for="forum">Forum</label>
 
-            <input type="checkbox" id="additional-courses" name="like">
-            <label for="additional-courses">Additional Courses</label>
+        <input type="checkbox" id="additional-courses" name="like" value="additional-courses">
+        <label for="additional-courses">Additional Courses</label>
 
-        </div>
-        <div>
-          <label for="comments">Any comments or suggestions?</label>
-          <textarea cols="" rows="" id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
-        </div>
-        <div>
-          <button>Submit</button>
-        </div>
-      </form>
+      </div>
+
+      <div>
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea cols="5" rows="5" id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
+      </div>
+      
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
   </div>
 </body>
 
