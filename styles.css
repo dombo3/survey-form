@@ -38,7 +38,7 @@ body {
   font-size: 1.1em;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   background-color: rgba(38, 36, 68, .8);
   margin-top: 40px;
   padding: 40px 15px 40px 15px;
@@ -80,7 +80,7 @@ select,
 textarea,
 button {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 0.9em;
   font-weight: inherit;
   box-sizing: border-box;
   border: 0px;
@@ -102,10 +102,13 @@ input[type="checkbox"] {
   margin: 0px 10px 0px 0px;
 }
 
-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
 select:focus,
 textarea:focus {
-  outline-color: black;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
 }
 
 button {
